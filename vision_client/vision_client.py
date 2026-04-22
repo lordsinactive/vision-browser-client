@@ -3,7 +3,8 @@ from httpx import AsyncClient
 
 from .methods import (
     Folders, Profiles, Proxies,
-    Statuses, Tags, Local, Fingerprints, Instant, Cookies,
+    Statuses, Tags, Local,
+    Fingerprints, Instant, Cookies,
 )
 
 class VisionClient(
