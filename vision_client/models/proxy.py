@@ -39,7 +39,8 @@ class Geolocation(BaseModel):
 
 class Proxy(BaseModel):
     id: UUID
-    user_id: UUID
+    user_id: Optional[UUID] = None
+    team_id: Optional[UUID] = None
     folder_id: UUID
     proxy_name: str
     proxy_type: ProxyType | str

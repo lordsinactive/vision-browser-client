@@ -1,5 +1,6 @@
 from datetime import datetime
 from enum import StrEnum
+from typing import Optional
 from uuid import UUID
 
 from pydantic import BaseModel
@@ -16,7 +17,8 @@ class TagColors(StrEnum):
 
 class Tag(BaseModel):
     id: UUID
-    user_id: UUID
+    user_id: Optional[UUID] = None
+    team_id: Optional[UUID] = None
     folder_id: UUID
     tag_name: str
     color: str

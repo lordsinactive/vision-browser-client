@@ -17,7 +17,8 @@ class StatusColors(StrEnum):
 
 class Status(BaseModel):
     id: UUID
-    user_id: UUID
+    user_id: Optional[UUID] = None
+    team_id: Optional[UUID] = None
     folder_id: UUID
     status: str
     status_color: str
